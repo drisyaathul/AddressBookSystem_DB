@@ -16,3 +16,9 @@ mysql> show Databases;
 | world                |
 +----------------------+
 8 rows in set (0.02 sec)
+#UC2:-
+mysql> use addressbookservicedb
+Database changed
+mysql> create table addressbook_table(firstname varchar(20),lastname varchar(20),address varchar(50),city varchar(20),state varchar(20),zip int,phone_number long,email varchar(30));
+Query OK, 0 rows affected (0.06 sec)
+
