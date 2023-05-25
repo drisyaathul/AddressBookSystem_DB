@@ -21,4 +21,18 @@ mysql> use addressbookservicedb
 Database changed
 mysql> create table addressbook_table(firstname varchar(20),lastname varchar(20),address varchar(50),city varchar(20),state varchar(20),zip int,phone_number long,email varchar(30));
 Query OK, 0 rows affected (0.06 sec)
+#UC3:-
+mysql> insert into addressbook_table(firstname,lastname,address,city,state,zip,phone_number,email) values ('Drisya','Athul','Geo','lumut','perak',12345,9999999999,'dri@gmail.com'),('Varsha','kumar','sri','cochin','kerala',45678,9898989898,'var@gmail.com'),('Aswathi','Ashok','sreyas','calicut','kerala',478963,8888899999,'asw@gmail.com'),('Kavya','pk','prestige','bangalore','karnataka',85214,9999999888,'kav@gmail.com');
+Query OK, 4 rows affected (0.02 sec)
+Records: 4  Duplicates: 0  Warnings: 0
 
+mysql> select * from addressbook_table;
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+| firstname | lastname | address  | city      | state     | zip    | phone_number | email         |
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+| Drisya    | Athul    | Geo      | lumut     | perak     |  12345 | 9999999999   | dri@gmail.com |
+| Varsha    | kumar    | sri      | cochin    | kerala    |  45678 | 9898989898   | var@gmail.com |
+| Aswathi   | Ashok    | sreyas   | calicut   | kerala    | 478963 | 8888899999   | asw@gmail.com |
+| Kavya     | pk       | prestige | bangalore | karnataka |  85214 | 9999999888   | kav@gmail.com |
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+4 rows in set (0.00 sec)
