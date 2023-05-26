@@ -101,3 +101,30 @@ mysql> select firstname from addressbook_table where city = 'bangalore' order by
 | Vishnu    |
 +-----------+
 2 rows in set (0.00 sec)
+#UC9:-
+mysql> alter table addressbook_table add column addressbook_name varchar(20) after lastname;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table addressbook_table add column type varchar(20) after addressbook_name;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> update addressbook_table set addressbook_name = 'abc',type = 'Friends' where firstname in ('Drisya','Kavya');
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update addressbook_table set addressbook_name = 'xyz',type = 'Family' where firstname in ('Aswathi','Vishnu');
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+------------------+---------+----------+-----------+-----------+--------+--------------+---------------+
+| firstname | lastname | addressbook_name | type    | address  | city      | state     | zip    | phone_number | email         |
++-----------+----------+------------------+---------+----------+-----------+-----------+--------+--------------+---------------+
+| Drisya    | Athul    | abc              | Friends | Geo_Appt | lumut     | perak     |  12345 | 9999999999   | dri@gmail.com |
+| Aswathi   | Ashok    | xyz              | Family  | sreyas   | calicut   | kerala    | 478963 | 8888899999   | asw@gmail.com |
+| Kavya     | pk       | abc              | Friends | prestige | bangalore | karnataka |  85214 | 9999999888   | kav@gmail.com |
+| Vishnu    | pk       | xyz              | Family  | prestige | bangalore | karnataka |  85214 | 9989777888   | vis@gmail.com |
++-----------+----------+------------------+---------+----------+-----------+-----------+--------+--------------+---------------+
+4 rows in set (0.00 sec)
