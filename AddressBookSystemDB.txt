@@ -36,3 +36,19 @@ mysql> select * from addressbook_table;
 | Kavya     | pk       | prestige | bangalore | karnataka |  85214 | 9999999888   | kav@gmail.com |
 +-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
 4 rows in set (0.00 sec)
+#UC4:-
+mysql> update addressbook_table set address='Geo_Appt' where firstname = 'Drisya';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook_table
+    -> ;
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+| firstname | lastname | address  | city      | state     | zip    | phone_number | email         |
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+| Drisya    | Athul    | Geo_Appt | lumut     | perak     |  12345 | 9999999999   | dri@gmail.com |
+| Varsha    | kumar    | sri      | cochin    | kerala    |  45678 | 9898989898   | var@gmail.com |
+| Aswathi   | Ashok    | sreyas   | calicut   | kerala    | 478963 | 8888899999   | asw@gmail.com |
+| Kavya     | pk       | prestige | bangalore | karnataka |  85214 | 9999999888   | kav@gmail.com |
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+4 rows in set (0.00 sec)
