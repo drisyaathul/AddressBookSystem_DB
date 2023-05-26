@@ -73,3 +73,22 @@ mysql> select city,state from addressbook_table where firstname = 'Kavya';
 | bangalore | karnataka |
 +-----------+-----------+
 1 row in set (0.00 sec)
+#UC7:-
+mysql> select * from addressbook_table;
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+| firstname | lastname | address  | city      | state     | zip    | phone_number | email         |
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+| Drisya    | Athul    | Geo_Appt | lumut     | perak     |  12345 | 9999999999   | dri@gmail.com |
+| Aswathi   | Ashok    | sreyas   | calicut   | kerala    | 478963 | 8888899999   | asw@gmail.com |
+| Kavya     | pk       | prestige | bangalore | karnataka |  85214 | 9999999888   | kav@gmail.com |
+| Vishnu    | pk       | prestige | bangalore | karnataka |  85214 | 9989777888   | vis@gmail.com |
++-----------+----------+----------+-----------+-----------+--------+--------------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select count(city),count(state) from addressbook_table where city = 'bangalore' and state = 'karnataka';
++-------------+--------------+
+| count(city) | count(state) |
++-------------+--------------+
+|           2 |            2 |
++-------------+--------------+
+1 row in set (0.01 sec)
