@@ -144,3 +144,22 @@ mysql> select count(type) from addressbook_table where type = 'Friends';
 |           2 |
 +-------------+
 1 row in set (0.00 sec)
+#UC11:-
+mysql> insert into addressbook_table values('sneha','Vyshagh','xyz','Family','Vyshagham','calicut','kerala',25896,777888999,'snh@gmail.com'),('Varsha','Stanil','abc','Friends','harsha','calicut','kerala',14569,88899977700,'var@gmail.com');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+------------------+---------+-----------+-----------+-----------+--------+--------------+---------------+
+| firstname | lastname | addressbook_name | type    | address   | city      | state     | zip    | phone_number | email         |
++-----------+----------+------------------+---------+-----------+-----------+-----------+--------+--------------+---------------+
+| Drisya    | Athul    | abc              | Friends | Geo_Appt  | lumut     | perak     |  12345 | 9999999999   | dri@gmail.com |
+| Aswathi   | Ashok    | xyz              | Family  | sreyas    | calicut   | kerala    | 478963 | 8888899999   | asw@gmail.com |
+| Kavya     | pk       | abc              | Friends | prestige  | bangalore | karnataka |  85214 | 9999999888   | kav@gmail.com |
+| Vishnu    | pk       | xyz              | Family  | prestige  | bangalore | karnataka |  85214 | 9989777888   | vis@gmail.com |
+| sneha     | Vyshagh  | xyz              | Family  | Vyshagham | calicut   | kerala    |  25896 | 777888999    | snh@gmail.com |
+| Varsha    | Stanil   | abc              | Friends | harsha    | calicut   | kerala    |  14569 | 88899977700  | var@gmail.com |
++-----------+----------+------------------+---------+-----------+-----------+-----------+--------+--------------+---------------+
+6 rows in set (0.00 sec)
+
+mysql>
