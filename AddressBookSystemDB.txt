@@ -163,3 +163,46 @@ mysql> select * from addressbook_table;
 6 rows in set (0.00 sec)
 
 mysql>
+#UC12:- ER Diagram
+#UC13:-
+mysql>  select firstname,lastname,city,state from addressbook_table where city = 'lumut' and state = 'perak' ;
++-----------+----------+-------+-------+
+| firstname | lastname | city  | state |
++-----------+----------+-------+-------+
+| Drisya    | Athul    | lumut | perak |
++-----------+----------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select count(city),count(state) from addressbook_table where city = 'calicut' and state = 'kerala';
++-------------+--------------+
+| count(city) | count(state) |
++-------------+--------------+
+|           3 |            3 |
++-------------+--------------+
+1 row in set (0.00 sec)
+
+mysql> select firstname from addressbook_table where city = 'calicut' order by firstname ASC;
++-----------+
+| firstname |
++-----------+
+| Aswathi   |
+| sneha     |
+| Varsha    |
++-----------+
+3 rows in set (0.00 sec)
+
+mysql> select count(type) from addressbook_table where type = 'Friends';
++-------------+
+| count(type) |
++-------------+
+|           3 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(type) from addressbook_table where type = 'Family';
++-------------+
+| count(type) |
++-------------+
+|           3 |
++-------------+
+1 row in set (0.00 sec)
